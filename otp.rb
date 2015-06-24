@@ -27,11 +27,15 @@ class OTP
     
 end
 
+puts ARGV[1]
 options = ARGV.shift
+
+
+
 input_stream = $stdin.read
 #puts input_stream
 
-if ARGV[0] == "g"
+if options == "g"
     seed = Random.new().seed
     f = File.open("seed.sec","w+")
     f.write(seed)
